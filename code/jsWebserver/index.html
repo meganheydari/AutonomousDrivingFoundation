@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Team8!</title>
+
+<script type="text/javascript" src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<style>
+body {
+	background-color: #01FF70;
+}
+.container {
+  display: flex;
+}
+.container > div {
+  flex: 1; /*grow*/
+}
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button5 {
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+}
+
+.button5:hover {
+  background-color: #555555;
+  color: white;
+}
+.button5:focus {outline:0;}
+</style>
+<script type="text/javascript">
+	function stop() {
+		console.log('stop');
+		$.post('/stop');
+	}
+	function start() {
+		console.log('start');
+		$.post('/start');
+	}
+</script>
+</head>
+<body>
+<br/>	
+<h1 style="text-align: center; font-family: Impact Header; color: hsla(127, 63%, 15%, 1.0);">Team8 Crawler Dashboard&copy</h1>
+<br/>	
+<br/>	
+<button style= "width:50%;display: block; margin-left: auto;margin-right: auto;"class="button button5"onclick="start()">Start</button>
+<button style= "width:50%;display: block; margin-left: auto;margin-right: auto;"class="button button5"onclick="stop()">Stop</button>
+
+</body>
+</html>
